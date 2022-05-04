@@ -1,1 +1,15 @@
-hi welcome
+this works Springboot version 2.6.0 and higher does not support swagger 2 Remove springfox and swagger 2 dependencies. Add springdoc-openapi-ui dependency instead.
+
+    <dependency>
+        <groupId>org.springdoc</groupId>
+        <artifactId>springdoc-openapi-ui</artifactId>
+        <version>1.6.6</version>
+    </dependency>
+
+add this to your application.properties file
+
+spring.mvc.pathmatch.matching-strategy = ANT_PATH_MATCHER
+
+after that navigate to http://localhost:8080/swagger-ui/index.html
+
+This worked for me
